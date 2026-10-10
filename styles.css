@@ -26,7 +26,7 @@ body {
   align-items: center;
   justify-items: end;
   min-height: 150px; 
-  border-bottom: 4px solid #9b1b6b;
+  border-bottom: 1px solid #c36fa3;
 }
 
 .header h1 {
@@ -109,7 +109,7 @@ body {
   font-family: "Caveat Brush", cursive;
   font-weight: 400;
   font-size: 26px;
-  border-bottom: 3px solid #9b1b6b;
+  border-bottom: 2px solid #9b1b6b;
 
 }
 
@@ -173,7 +173,7 @@ body {
   font-family: "Caveat Brush", cursive;
   font-weight: 400;
   font-size: 26px;
-  border-bottom: 3px solid #9b1b6b;
+  border-bottom: 2px solid #9b1b6b;
 }
 
 .sectiongaleria a {
