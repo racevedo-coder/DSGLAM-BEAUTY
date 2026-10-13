@@ -36,7 +36,7 @@
       <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p> 
     </section>
 
-    <section class="sectionformulario">
+    <section class="sectionformulario" aria-label="Formulario de contacto">
       <form action="#" method="post" aria-label="Formulario de contacto">
          <label for="nombre"> Nombre</label>
            <input type="text" id="nombre" name="nombre" required
@@ -51,10 +51,10 @@
               title="Por favor, ingresa un correo electrónico válido">
 
 
-          <label for="teléfono"> Teléfono</label>
-            <input type="tel" id="teléfono" name="teléfono" required
+          <label for="telefono"> Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required
               pattern="3[0-9]{9}"
-              placeholder = "Ej: 300 571 1806"
+              placeholder="Ej: 3005711806"
               title="Por favor, ingresa un número de teléfono válido. Debe comenzar con 3 y tener 10 dígitos">
 
           <label for="fecha"> Fecha deseada para la cita</label>
@@ -79,6 +79,35 @@
           allowfullscreen
           referrerpolicy="strict-origin-when-cross-origin"></iframe>
     </section>
+
+    <section class="sectiondatos" aria-label="Datos de contacto">
+       <address>
+         <ul>
+           <li>
+              <h3><i class="fa-solid fa-phone iconotel" aria-hidden="true"></i> Teléfono:</h3>
+              <p><a href="tel:+573005831530">3005831530</a></p>
+           </li>
+
+           <li>
+              <h3><i class="fa-regular fa-clock iconohor" aria-hidden="true"></i> Horarios de atención:</h3>
+              <p>Lunes a Domingo</p>
+              <p>7:00 am - 12 pm</p>
+              <p>2:00 pm - 10 pm</p>
+           </li>
+
+           <li>
+              <h3><i class="fa-brands fa-whatsapp iconowhat" aria-hidden="true"></i> WhatsApp:</h3>
+              <p><a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">3005831530</a></p>
+           </li>
+
+           <li>
+               <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dirección:</h3>
+               <p>Calle 20 carrera 1k-51</p>
+               <p>Barrio San José / Sahagún-Córdoba, Colombia</p>
+           </li>
+          </ul>
+       </address>
+     </section>
 
   </main>
 
