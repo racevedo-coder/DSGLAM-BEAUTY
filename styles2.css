@@ -21,7 +21,8 @@
 
 .sectionquienessomos,
 .sectioncontacto,
-.sectioncatalogo {
+.sectioncatalogo,
+.sectiongaleria {
   background-color: #f5ddeb;
   padding: 20px;
   text-align: center;
@@ -30,7 +31,8 @@
 
 .sectionquienessomos h1,
 .sectioncontacto h1,
-.sectioncatalogo h1 {
+.sectioncatalogo h1,
+.sectiongaleria h1 {
   font-family: "Caveat Brush", cursive;
   font-weight: 400;
   font-size: 44px;
@@ -198,7 +200,8 @@
   cursor: pointer;
 }
 
-.nav-catalogo ul {
+.nav-catalogo ul,
+.nav-galeria ul {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -207,7 +210,8 @@
   justify-content: flex-start;
 }
 
-.nav-catalogo a {
+.nav-catalogo a,
+.nav-galeria a {
   display: inline-block;
   padding: 6px 18px;
   border: 1.5px solid #8e1b59;
@@ -221,16 +225,18 @@
 }
 
 .nav-catalogo a:hover,
-.nav-catalogo a.activo {
+.nav-catalogo a.activo,
+.nav-galeria a:hover,
+.nav-galeria a.activo {
   background-color: #8e1b59;
   color: #ffffff;
 }
 
-.sectioncatalogo {
+.sectioncatalogo,
+.sectiongaleria {
   text-align: left;
   padding: 20px 40px;
 }
-
 
 .sectionservicios .btn-detalle {
   display: inline-flex;
@@ -252,6 +258,7 @@
   background-color: #6e1244;
   transform: translateX(2px);
 }
+
 
 .paginacion {
   display: flex;
@@ -288,7 +295,6 @@
   background-color: #8e1b59;
   color: #ffffff;
 }
-
 
 .paginacion a.deshabilitado {
   opacity: 0.3;
