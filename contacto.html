@@ -1,165 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DsGlam-Beauty | Contáctanos</title>
-    <meta name="description" content="Agenda tu cita en DsGlam-Beauty. Déjanos tus datos y te escribimos">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@400;600&display=swap" rel="stylesheet">   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DsGlam-Beauty | Contáctanos</title>
+  <meta name="description" content="Agenda tu cita en DsGlam-Beauty. Déjanos tus datos y te escribimos">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles2.css">
 </head>
-<body>
-  <header class="header-interno" id="inicio">
-   <h2>DsGlam-Beauty</h2>
-   <nav class="nav" aria-label="Navegación principal">
+
+<body id="top">
+  <header class="header-interno">
+    <h2>DsGlam-Beauty</h2>
+    <nav class="nav" aria-label="Navegación principal">
       <input type="checkbox" id="menu-toggle" class="menu-toggle">
-       <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
-          <i class="fa-solid fa-bars" aria-hidden="true"></i>
-       </label>
+      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      </label>
       <ul>
-          <li><a href="index.html" >Inicio</a></li>
-          <li><a href="catalogo.html">Catálogo</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="quienes-somos.html" >¿Quiénes somos?</a></li>
-          <li><a href="contacto.html" aria-current="page" >Contacto</a></li>
-      </ul> 
-   </nav> 
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main class="maincontacto">
     <section class="sectioncontacto">
       <h1>Contáctanos</h1>
-      <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p> 
+      <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p>
     </section>
 
     <section class="sectionformulario" aria-label="Formulario de contacto">
       <form action="#" method="post" aria-label="Formulario de contacto">
-         <label for="nombre"> Nombre</label>
-           <input type="text" id="nombre" name="nombre" required
-              minlength="3" maxlength="70"
-              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,70}"
-              placeholder="Ej: Laura Gómez"
-              title="Solo letras, entre 3 y 70 caracteres">
+        <label for="nombre"> Nombre</label>
+        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="70"
+          pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,70}" placeholder="Ej: Laura Gómez"
+          title="Solo letras, entre 3 y 70 caracteres">
 
-          <label for="correo"> Correo electrónico</label>
-            <input type="email" id="correo" name="correo" required
-              placeholder="Ej: laura123@gmail.com"
-              title="Por favor, ingresa un correo electrónico válido">
+        <label for="telefono"> Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}" placeholder="Ej: 3005711806"
+          title="Por favor, ingresa un número de teléfono válido. Debe comenzar con 3 y tener 10 dígitos">
 
+        <label for="correo"> Correo electrónico</label>
+        <input type="email" id="correo" name="correo" required placeholder="Ej: laura123@gmail.com"
+          title="Por favor, ingresa un correo electrónico válido">
 
-          <label for="telefono"> Teléfono</label>
-            <input type="tel" id="telefono" name="telefono" required
-              pattern="3[0-9]{9}"
-              placeholder="Ej: 3005711806"
-              title="Por favor, ingresa un número de teléfono válido. Debe comenzar con 3 y tener 10 dígitos">
+        <label for="fecha"> Fecha deseada para la cita</label>
+        <input type="date" id="fecha" name="fecha" required min="2026-10-14" max="2026-12-31"
+          title="Por favor, selecciona una fecha entre el 14 de octubre y el 31 de diciembre de 2026">
 
-          <label for="fecha"> Fecha deseada para la cita</label>
-            <input type="date" id="fecha" name="fecha" required
-              min="2026-10-14" max="2026-12-31"
-              title="Por favor, selecciona una fecha entre el 14 de octubre y el 31 de diciembre de 2026">
+        <label for="mensaje"> Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"
+          placeholder="Escribe tu mensaje aquí. Cuéntanos qué necesitas o qué servicio te interesa."></textarea>
 
-          <label for="mensaje"> Mensaje</label>
-             <textarea id="mensaje" name="mensaje" rows="5" required
-              minlength="10" maxlength="500"
-              placeholder="Escribe tu mensaje aquí. Cuéntanos qué necesitas o qué servicio te interesa." ></textarea>
-
-           <button type="submit"> Enviar mensaje</button>
+        <button type="submit"> Enviar mensaje</button>
       </form>
     </section>
 
     <section class="sectionmapa" aria-label="Ubicación de DsGlam-Beauty">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.2928821644541!2d-75.44864791253767!3d8.956337099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5963c4e2b20c4b%3A0x84f1c4f84e57e3b6!2zQ2wuIDIwICMgMUstNTEsIFNhaGFnw7puLCBDw7NyZG9iYQ!5e0!3m2!1ses!2sco!4v1791894151842!5m2!1ses!2sco"
-      title="Mapa con la ubicación de DsGlam-Beauty"
-          width="330" height="195"
-          loading="lazy"
-          allowfullscreen
+      <h2> Encuéntranos aquí</h2>
+      <div class="mapa-contenedor">
+        <div class="tarjeta-mapa">
+          <h3>DsGlam-Beauty</h3>
+          <p>Calle 20 carrera 1k-51, Sahagún</p>
+          <a href="https://maps.google.com/?q=Cl.+20+%231K-51,+Sahag%C3%BAn,+C%C3%B3rdoba" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir en Maps
+          </a>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.2928821644541!2d-75.44864791253767!3d8.956337099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5963c4e2b20c4b%3A0x84f1c4f84e57e3b6!2zQ2wuIDIwICMgMUstNTEsIFNhaGFnw7puLCBDw7NyZG9iYQ!5e0!3m2!1ses!2sco!4v1791894151842!5m2!1ses!2sco"
+          title="Mapa con la ubicación de DsGlam-Beauty" width="330" height="195" loading="lazy" allowfullscreen
           referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
     </section>
 
+
     <section class="sectiondatos" aria-label="Datos de contacto">
-       <address>
-         <ul>
-           <li>
-              <h3><i class="fa-solid fa-phone iconotel" aria-hidden="true"></i> Teléfono:</h3>
-              <p><a href="tel:+573005831530">3005831530</a></p>
-           </li>
+      <address>
+        <ul>
+          <li>
+            <h3><i class="fa-solid fa-phone iconotel" aria-hidden="true"></i> Teléfono:</h3>
+            <p><a href="tel:+573005831530">3005831530</a></p>
+          </li>
 
-           <li>
-              <h3><i class="fa-regular fa-clock iconohor" aria-hidden="true"></i> Horarios de atención:</h3>
-              <p>Lunes a Domingo</p>
-              <p>7:00 am - 12 pm</p>
-              <p>2:00 pm - 10 pm</p>
-           </li>
+          <li>
+            <h3><i class="fa-regular fa-clock iconohor" aria-hidden="true"></i> Horarios de atención:</h3>
+            <p>Lunes a Domingo</p>
+            <p>7:00 am - 12 pm</p>
+            <p>2:00 pm - 10 pm</p>
+          </li>
 
-           <li>
-              <h3><i class="fa-brands fa-whatsapp iconowhat" aria-hidden="true"></i> WhatsApp:</h3>
-              <p><a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">3005831530</a></p>
-           </li>
+          <li>
+            <h3><i class="fa-brands fa-whatsapp iconowhat" aria-hidden="true"></i> WhatsApp:</h3>
+            <p><a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">3005831530</a></p>
+          </li>
 
-           <li>
-               <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dirección:</h3>
-               <p>Calle 20 carrera 1k-51</p>
-               <p>Barrio San José / Sahagún-Córdoba, Colombia</p>
-           </li>
-          </ul>
-       </address>
-     </section>
+          <li>
+            <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dirección:</h3>
+            <p>Calle 20 carrera 1k-51</p>
+            <p>Barrio San José / Sahagún-Córdoba, Colombia</p>
+          </li>
+        </ul>
+      </address>
+    </section>
 
   </main>
 
-   <aside aria-label="Accesos rápidos">
-        <a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer"> 
-            <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+  <aside aria-label="Accesos rápidos">
+    <a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">
+      <img src="img/whatsapp.png" alt="WhatsApp" width="30" height="30">
+    </a>
+
+    <a href="https://www.instagram.com/dsglambeauty2025?exln=bGxveWJzOHVlc3Vj" target="_blank"
+      rel="noopener noreferrer">
+      <img src="img/instagram.png" alt="Instagram" width="30" height="30">
+    </a>
+
+    <a href="#top" aria-label="Volver arriba">
+      <img src="img/subir-archivo.png" alt="Volver arriba" width="30" height="30">
+    </a>
+  </aside>
+
+  <footer class="footer">
+    <section>
+      <h2>DsGlam-Beauty</h2>
+      <p>Salón de Belleza</p>
+    </section>
+
+    <section>
+      <h3>Síguenos</h3>
+      <a href="https://www.instagram.com/dsglambeauty2025?exln=bGxveWJzOHVlc3Vj" target="_blank"
+        rel="noopener noreferrer">
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i> dsglambeauty2025
+      </a>
+    </section>
+
+    <section>
+      <h3>Contacto</h3>
+      <address>
+        <a href="tel:+573011152564">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i> 301 115 2564
         </a>
+      </address>
+    </section>
 
-        <a href="https://www.instagram.com/dsglambeauty2025?exln=bGxveWJzOHVlc3Vj" target="_blank" rel="noopener noreferrer"> 
-            <img src="img/instagram.png" alt="Instagram" width="30" height="30">
-        </a>
-
-        <a href="#inicio"> 
-            <img src="img/subir-archivo.png" alt="Volver arriba" width="30" height="30">
-        </a>
-    </aside>
-
-    <footer class="footer">
-      <section>
-        <h2>DsGlam-Beauty</h2>
-        <p>Salón de Belleza</p>
-      </section> 
-
-      <section>
-        <h3>Síguenos</h3>
-         <a href="https://www.instagram.com/dsglambeauty2025?exln=bGxveWJzOHVlc3Vj" target="_blank" rel="noopener noreferrer">
-         <i class="fa-brands fa-instagram" aria-hidden="true"></i> dsglambeauty2025
-         </a>
-      </section>
-      
-      <section>
-          <h3>Contacto</h3>
-          <address>
-            <a href="tel:+573011152564">
-              <i class="fa-solid fa-phone" aria-hidden="true"></i> 301 115 2564
-           </a>
-         </address>
-      </section>
-
-     <nav aria-label="Soporte">
+    <nav aria-label="Soporte">
       <h3>Soporte</h3>
-        <ul>
-         <li><a href="catalogo.html">Catálogo</a></li>
-         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-         <li><a href="galeria.html">Galería</a></li>
-         <li><a href="contacto.html">Contacto</a></li>
-       </ul>
-     </nav>
+      <ul>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
 
     <small>Copyright © 2026 DsGlam-Beauty. Todos los derechos reservados.</small>
 
-    </footer>
+  </footer>
 
 </body>
 
