@@ -611,3 +611,492 @@ input#telefono {
   border-radius: 20px;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
+
+.main-detalle {
+  padding: 0 40px 40px;
+}
+
+.seccion-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  padding: 30px 0;
+}
+
+.detalle-imagen {
+  margin: 0;
+}
+
+.detalle-imagen img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.detalle-info {
+  padding-left: 16px;
+  text-align: center;
+
+}
+
+.detalle-info h1 {
+  font-size: 26px;
+  color: #9b1b6b;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.detalle-subtitulo {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.detalle-precio-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #fce4f3;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  max-width: 420px;
+  margin: 0 auto 24px;
+}
+
+.badge-precio {
+  background-color: transparent !important;
+  color: #000 !important;
+  font-size: 25px !important;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn-contacto {
+  background-color: #9b1b6b;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.btn-contacto:hover {
+  background-color: #7a0f55;
+  color: #fff;
+}
+
+.detalle-especificaciones ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 420px;
+  width: 100%;
+}
+
+
+.detalle-especificaciones li {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  text-align: left;
+}
+
+
+.detalle-especificaciones li i {
+  color: #9b1b6b;
+  font-size: 16px;
+  width: 18px;
+  text-align: center;
+}
+
+.seccion-relacionados {
+  padding: 30px 0;
+  border-top: 1px solid #e8c7db;
+}
+
+.relacionados-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.relacionados-encabezado h2 {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #9b1b6b;
+}
+
+.relacionados-vermas {
+  color: #9b1b6b;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.relacionados-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card-relacionado {
+  border: 1px solid #e0b8d4;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-relacionado .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-relacionado .card-body {
+  padding: 12px 16px;
+}
+
+.card-relacionado .card-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-relacionado .card-text {
+  color: #9b1b6b;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn-detalle-sm {
+  background-color: #9b1b6b;
+  color: #fff;
+  font-size: 13px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.btn-detalle-sm:hover {
+  background-color: #7a0f55;
+  color: #fff;
+}
+
+.breadcrumb-detalle {
+  padding: 12px 0 0;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: #9b1b6b;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+  color: #444;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #9b1b6b;
+}
+
+@media (max-width: 1024px) {
+  .header-interno {
+    padding: 10px 24px;
+  }
+
+  .sectionservicios,
+  .sectiongaleria-page {
+    padding: 20px 24px;
+  }
+
+  .sectioncatalogo {
+    padding: 16px 24px;
+  }
+
+  .sectiontrabajo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 30px 30px 10px;
+  }
+
+  .sectionelegirnos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 20px 30px 30px;
+  }
+
+  .maincontacto {
+    column-gap: 24px;
+  }
+
+  .sectionformulario {
+    padding: 30px 0 0 40px;
+  }
+
+  .sectionmapa,
+  .sectiondatos {
+    margin-right: 40px;
+  }
+
+  .relacionados-grid {
+    gap: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-interno {
+    padding: 10px 16px;
+    position: relative;
+  }
+
+  .header-interno .menu-boton {
+    display: block;
+    font-size: 26px;
+    color: #9b1b6b;
+    cursor: pointer;
+  }
+
+  .header-interno .nav ul {
+    display: none;
+    position: absolute;
+    top: 52px;
+    right: 16px;
+    z-index: 100;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+    padding: 14px 18px;
+    border: 1px solid #f0c9da;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .header-interno .menu-toggle:checked~ul {
+    display: flex;
+  }
+
+  .sectioncatalogo {
+    padding: 14px 16px;
+    text-align: left;
+  }
+
+  .nav-catalogo ul,
+  .nav-galeria ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    gap: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-catalogo ul::-webkit-scrollbar,
+  .nav-galeria ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-catalogo a,
+  .nav-galeria a {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-catalogo,
+  .nav-galeria {
+    position: relative;
+  }
+
+  .nav-catalogo::after,
+  .nav-galeria::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 48px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #f5ddeb 85%);
+    pointer-events: none;
+  }
+
+  .sectionservicios {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .sectionservicios article {
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  .sectionservicios article img {
+    width: 130px;
+    height: 110px;
+    flex-shrink: 0;
+  }
+
+  .sectiongaleria-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    grid-auto-rows: 160px;
+    height: auto;
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .sectiongaleria-page figure:nth-child(n) {
+    grid-column: auto;
+    grid-row: auto;
+    height: 160px;
+  }
+
+  .sectiongaleria-page figure:nth-child(1),
+  .sectiongaleria-page figure:nth-child(3) {
+    grid-row: span 2;
+    height: auto;
+  }
+
+  .sectiongaleria-page figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .sectiontrabajo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 20px 16px 10px;
+    gap: 16px;
+  }
+
+  .sectionelegirnos {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .sectionelegirnos article+article {
+    border-left: none;
+    border-top: 1px solid #ccc;
+  }
+
+  .maincontacto {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionformulario {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 24px 16px 0;
+  }
+
+  .sectionformulario form {
+    max-width: 100%;
+  }
+
+  .sectionmapa {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: stretch;
+    margin-right: 16px;
+    padding-top: 20px;
+    max-width: 100%;
+  }
+
+  .sectiondatos {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: stretch;
+    margin-right: 16px;
+    max-width: 100%;
+  }
+
+  .seccion-detalle {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .detalle-imagen img {
+    height: 260px;
+  }
+
+  .detalle-info {
+    padding-left: 0;
+  }
+
+  .relacionados-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-detalle {
+    padding: 0 16px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-interno h2 {
+    font-size: 20px;
+  }
+
+  .sectionservicios article img {
+    width: 110px;
+    height: 95px;
+  }
+
+  .sectionservicios article h3 {
+    font-size: 14px;
+  }
+
+  .sectionservicios article p {
+    font-size: 13px;
+  }
+
+  .sectiongaleria-page {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .sectiongaleria-page figure:nth-child(n) {
+    height: 180px;
+  }
+
+  .detalle-precio-box {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .relacionados-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-relacionado .card-img-top {
+    height: 150px;
+  }
+
+  .sectiondatos ul {
+    grid-template-columns: 1fr;
+  }
+
+  .sectiondatos ul::after {
+    display: none;
+  }
+}
