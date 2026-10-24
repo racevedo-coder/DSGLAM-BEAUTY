@@ -25,7 +25,6 @@ En este primer avance se implementó la estructura base y la interfaz visual ada
 * `contacto.html`: Formulario para agendar citas, mapa de ubicación e información de contacto.
 * Páginas de detalle: Vistas individuales de servicios (`detalle-maquillaje-dia.html`, `detalle-cejas.html`, `detalle-keratinas.html`).
 
----
 
 ### Aspectos importantes
 
