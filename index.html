@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -46,16 +45,13 @@
           <a class="boton boton-borde" href="catalogo.html">Ver servicios</a>
         </div>
       </div>
-      <!-- Carrusel Bootstrap automático con las 3 imágenes -->
       <div id="carruselInicio" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
-        <!-- Indicadores -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
           <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Imagen 2"></button>
           <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Imagen 3"></button>
         </div>
 
-        <!-- Slides con las 3 imágenes: iniciooo, iniciooo3 e iniciooo2 -->
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="img/iniciooo.jpg" class="d-block w-100"
@@ -208,10 +204,8 @@
 
   </footer>
 
-  <!-- Bootstrap 5 JavaScript Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Inicialización explícita para garantizar cambio automático continuo
     const elCarrusel = document.getElementById('carruselInicio');
     if (elCarrusel && window.bootstrap) {
       new bootstrap.Carousel(elCarrusel, {
