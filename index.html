@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -12,29 +12,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Poppins:wght@400;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body id="top" class="inicio">
   <header class="header">
-     <div class="barra">
-    <h2>DsGlam-Beauty</h2>
-    <nav class="nav" aria-label="Navegación principal">
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars" aria-hidden="true"></i>
-      </label>
-      <ul>
-        <li><a href="index.html" aria-current="page">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="galeria.html">Galería</a></li>
-        <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="barra">
+      <h2>DsGlam-Beauty</h2>
+      <nav class="nav" aria-label="Navegación principal">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </label>
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
 
-   <div class="hero">
+    <div class="hero">
       <div class="hero-texto">
         <p class="etiqueta">Salón de belleza</p>
         <p class="lema">"Resaltando la mejor versión de ti misma"</p>
@@ -44,7 +46,31 @@
           <a class="boton boton-borde" href="catalogo.html">Ver servicios</a>
         </div>
       </div>
-      <img class="hero-img" src="img/iniciooo.jpg" alt="Maquillaje con delineado plateado y rubor rosado realizado en DsGlam-Beauty" width="450" height="380">
+      <!-- Carrusel Bootstrap automático con las 3 imágenes -->
+      <div id="carruselInicio" class="carousel slide carousel-fade hero-carousel" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+          <button type="button" data-bs-target="#carruselInicio" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+        </div>
+
+        <!-- Slides con las 3 imágenes: iniciooo, iniciooo3 e iniciooo2 -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/iniciooo.jpg" class="d-block w-100"
+              alt="Maquillaje profesional con delineado plateado y rubor rosado realizado en DsGlam-Beauty" width="450" height="380">
+          </div>
+          <div class="carousel-item">
+            <img src="img/iniciooo3.jpg" class="d-block w-100"
+              alt="Peinados y servicios estéticos en DsGlam-Beauty" width="450" height="380">
+          </div>
+          <div class="carousel-item">
+            <img src="img/iniciooo2.jpg" class="d-block w-100"
+              alt="Maquillaje y cuidado personal en DsGlam-Beauty" width="450" height="380">
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -60,7 +86,7 @@
         <div>
           <h3>Maquillaje social</h3>
           <p> $ 40.000</p>
-          <a href="#" class="ver-detalle">Ver detalle &rarr;</a>
+          <a href="detalle-maquillaje-dia.html" class="ver-detalle">Ver detalle &rarr;</a>
         </div>
       </article>
 
@@ -69,7 +95,7 @@
         <div>
           <h3>Diseño de Cejas-Semi</h3>
           <p> $ 15.000</p>
-          <a href="#" class="ver-detalle">Ver detalle &rarr;</a>
+          <a href="detalle-cejas.html" class="ver-detalle">Ver detalle &rarr;</a>
         </div>
       </article>
 
@@ -78,7 +104,7 @@
         <div>
           <h3>Keratinas</h3>
           <p> $ 130.000</p>
-          <a href="#" class="ver-detalle">Ver detalle &rarr;</a>
+          <a href="detalle-keratinas.html" class="ver-detalle">Ver detalle &rarr;</a>
         </div>
       </article>
     </section>
@@ -127,28 +153,6 @@
           <p>Mira nuestros trabajos reales en la galería.</p>
         </li>
       </ul>
-    </section>
-
-    <section class="pasos">
-      <h2>Agenda tu cita en 3 pasos</h2>
-      <ol>
-        <li>
-          <h3>Elige tu servicio</h3>
-          <p>Revisa el catálogo y escoge lo que necesitas.</p>
-        </li>
-        <li>
-          <h3>Escríbenos por WhatsApp</h3>
-          <p>Cuéntanos qué servicio quieres y tu horario.</p>
-        </li>
-        <li>
-          <h3>Confirma y ven</h3>
-          <p>Te confirmamos la cita y te esperamos.</p>
-        </li>
-         </ol>
-        <a class="boton" href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">Reservar por
-          WhatsApp</a>
-    </section>
-
     </section>
   </main>
 
@@ -204,6 +208,20 @@
 
   </footer>
 
+  <!-- Bootstrap 5 JavaScript Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Inicialización explícita para garantizar cambio automático continuo
+    const elCarrusel = document.getElementById('carruselInicio');
+    if (elCarrusel && window.bootstrap) {
+      new bootstrap.Carousel(elCarrusel, {
+        interval: 3000,
+        ride: 'carousel',
+        pause: false,
+        wrap: true
+      });
+    }
+  </script>
 </body>
 
 </html>

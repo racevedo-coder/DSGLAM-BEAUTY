@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -39,81 +39,129 @@
       <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p>
     </section>
 
-    <section class="sectionformulario" aria-label="Formulario de contacto">
-      <form action="#" method="post" aria-label="Formulario de contacto">
-        <label for="nombre"> Nombre</label>
-        <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="70"
-          pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,70}" placeholder="Ej: Laura Gómez"
-          title="Solo letras, entre 3 y 70 caracteres">
+    <div class="contacto-wrapper">
+      <section class="sectionformulario" aria-label="Formulario de contacto">
+        <form action="#" method="post" aria-label="Formulario de contacto">
+          <div class="form-row">
+            <div class="campo-grupo">
+              <label for="nombre">Nombre</label>
+              <div class="input-icono">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="70"
+                  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,70}" placeholder="Laura Gómez"
+                  title="Solo letras, entre 3 y 70 caracteres">
+              </div>
+            </div>
 
-        <label for="telefono"> Teléfono</label>
-        <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}" placeholder="Ej: 3005711806"
-          title="Por favor, ingresa un número de teléfono válido. Debe comenzar con 3 y tener 10 dígitos">
+            <div class="campo-grupo">
+              <label for="telefono">Teléfono</label>
+              <div class="input-icono">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <input type="tel" id="telefono" name="telefono" required pattern="3[0-9]{9}" placeholder="3005711806"
+                  title="Por favor, ingresa un número de teléfono válido. Debe comenzar con 3 y tener 10 dígitos">
+              </div>
+            </div>
+          </div>
 
-        <label for="correo"> Correo electrónico</label>
-        <input type="email" id="correo" name="correo" required placeholder="Ej: laura123@gmail.com"
-          title="Por favor, ingresa un correo electrónico válido">
+          <div class="campo-grupo">
+            <label for="correo">Correo electrónico</label>
+            <div class="input-icono">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+              <input type="email" id="correo" name="correo" required placeholder="laura123@gmail.com"
+                title="Por favor, ingresa un correo electrónico válido">
+            </div>
+          </div>
 
-        <label for="fecha"> Fecha deseada para la cita</label>
-        <input type="date" id="fecha" name="fecha" required min="2026-10-14" max="2026-12-31"
-          title="Por favor, selecciona una fecha entre el 14 de octubre y el 31 de diciembre de 2026">
+          <div class="campo-grupo">
+            <label for="fecha">Fecha deseada para la cita</label>
+            <div class="input-icono">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              <input type="date" id="fecha" name="fecha" required min="2026-10-14" max="2026-12-31"
+                placeholder="dd/mm/aaaa">
+            </div>
+          </div>
 
-        <label for="mensaje"> Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500"
-          placeholder="Escribe tu mensaje aquí. Cuéntanos qué necesitas o qué servicio te interesa."></textarea>
+          <div class="campo-grupo">
+            <label for="mensaje">Mensaje</label>
+            <div class="input-icono textarea-icono">
+              <i class="fa-regular fa-comment-dots" aria-hidden="true"></i>
+              <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="500"
+                placeholder="Cuéntanos qué servicio te interesa"></textarea>
+            </div>
+          </div>
 
-        <button type="submit"> Enviar mensaje</button>
-      </form>
-    </section>
+          <button type="submit" class="btn-enviar">
+            <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Enviar mensaje
+          </button>
+        </form>
+      </section>
 
-    <section class="sectionmapa" aria-label="Ubicación de DsGlam-Beauty">
-      <h2> Encuéntranos aquí</h2>
-      <div class="mapa-contenedor">
-        <div class="tarjeta-mapa">
-          <h3>DsGlam-Beauty</h3>
-          <p>Calle 20 carrera 1k-51, Sahagún</p>
-          <a href="https://maps.google.com/?q=Cl.+20+%231K-51,+Sahag%C3%BAn,+C%C3%B3rdoba" target="_blank"
-            rel="noopener noreferrer">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir en Maps
-          </a>
-        </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.2928821644541!2d-75.44864791253767!3d8.956337099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5963c4e2b20c4b%3A0x84f1c4f84e57e3b6!2zQ2wuIDIwICMgMUstNTEsIFNhaGFnw7puLCBDw7NyZG9iYQ!5e0!3m2!1ses!2sco!4v1791894151842!5m2!1ses!2sco"
-          title="Mapa con la ubicación de DsGlam-Beauty" width="330" height="195" loading="lazy" allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <div class="contacto-col-derecha">
+        <section class="sectionmapa" aria-label="Ubicación de DsGlam-Beauty">
+          <h2>Encuéntranos aquí</h2>
+          <div class="mapa-contenedor">
+            <div class="tarjeta-mapa">
+              <h3>DsGlam-Beauty</h3>
+              <p>Calle 20 carrera 1k-51, Sahagún</p>
+              <a href="https://maps.google.com/?q=Cl.+20+%231K-51,+Sahag%C3%BAn,+C%C3%B3rdoba" target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir en Maps
+              </a>
+            </div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d985.2928821644541!2d-75.44864791253767!3d8.956337099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5963c4e2b20c4b%3A0x84f1c4f84e57e3b6!2zQ2wuIDIwICMgMUstNTEsIFNhaGFnw7puLCBDw7NyZG9iYQ!5e0!3m2!1ses!2sco!4v1791894151842!5m2!1ses!2sco"
+              title="Mapa con la ubicación de DsGlam-Beauty" width="330" height="195" loading="lazy" allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </section>
+
+        <section class="sectiondatos" aria-label="Datos de contacto">
+          <address>
+            <div class="datos-grid">
+              <div class="dato-card">
+                <div class="dato-icono">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="dato-info">
+                  <h3>Teléfono</h3>
+                  <a href="tel:+573011152564">301 115 2564</a>
+                </div>
+              </div>
+
+              <div class="dato-card">
+                <div class="dato-icono">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                </div>
+                <div class="dato-info">
+                  <h3>WhatsApp</h3>
+                  <a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">301 115 2564</a>
+                </div>
+              </div>
+
+              <div class="dato-card">
+                <div class="dato-icono">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                </div>
+                <div class="dato-info">
+                  <h3>Horarios</h3>
+                  <p>Lunes a domingo<br>7-12 am · 2-10 pm</p>
+                </div>
+              </div>
+
+              <div class="dato-card">
+                <div class="dato-icono">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+                <div class="dato-info">
+                  <h3>Dirección</h3>
+                  <p>Calle 20 cra 1k-51<br>Sahagún, Córdoba</p>
+                </div>
+              </div>
+            </div>
+          </address>
+        </section>
       </div>
-    </section>
-
-
-    <section class="sectiondatos" aria-label="Datos de contacto">
-      <address>
-        <ul>
-          <li>
-            <h3><i class="fa-solid fa-phone iconotel" aria-hidden="true"></i> Teléfono:</h3>
-            <p><a href="tel:+573005831530">3005831530</a></p>
-          </li>
-
-          <li>
-            <h3><i class="fa-regular fa-clock iconohor" aria-hidden="true"></i> Horarios de atención:</h3>
-            <p>Lunes a Domingo</p>
-            <p>7:00 am - 12 pm</p>
-            <p>2:00 pm - 10 pm</p>
-          </li>
-
-          <li>
-            <h3><i class="fa-brands fa-whatsapp iconowhat" aria-hidden="true"></i> WhatsApp:</h3>
-            <p><a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">3005831530</a></p>
-          </li>
-
-          <li>
-            <h3><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Dirección:</h3>
-            <p>Calle 20 carrera 1k-51</p>
-            <p>Barrio San José / Sahagún-Córdoba, Colombia</p>
-          </li>
-        </ul>
-      </address>
-    </section>
-
+    </div>
   </main>
 
   <aside aria-label="Accesos rápidos">
