@@ -312,6 +312,261 @@
   font-size: 15px;
 }
 
+.sectionformulario.modo-edicion {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: min(90vw, 450px);
+  z-index: 1000;
+  background: #fff;
+}
+
+#fondo-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+#fondo-modal.visible { display: block; }
+
+.btn-cancelar { display: none; }
+.modo-edicion .btn-cancelar { display: block; }
+
+#lista-solicitudes { display: none; }
+
+/* Estilo para el contenedor de la lista de solicitudes cuando está abierto */
+#lista-solicitudes.abierta {
+  display: block;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: min(90vw, 420px);
+  z-index: 1000;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.contador {
+  display: block;
+  text-align: right;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
+
+/* Estilo para el contador cuando se alcanza el límite de caracteres */
+.contador.limite {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+
+  .btn-ver {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid #8b1a55;
+  background: #fff;
+  color: #8b1a55;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.btn-ver:hover {
+  background: #8b1a55;
+  color: #fff;
+}
+
+.solicitud + .solicitud {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f3cfe0;
+}
+
+.solicitud {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  text-align: center;
+}
+
+.solicitud h2,
+.solicitud h3,
+.solicitud p,
+.solicitud .btn-aceptar {
+  grid-column: 1 / -1;
+}
+
+.solicitud h3 {
+  font-size: 1.15rem;
+  margin: 4px 0 0;
+}
+
+.solicitud p {
+  background: #fbeaf2;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.solicitud button {
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.solicitud button:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+.btn-aceptar {
+  order: 1;
+  background: #8b1a55;
+  color: #fff;
+  border: none;
+}
+
+.btn-editar {
+  background: #fff;
+  color: #8b1a55;
+  border: 1.5px solid #8b1a55;
+}
+
+.btn-quitar {
+  background: #fff;
+  color: #db4f4f;
+  border: 1.5px solid #9b1919;
+}
+
+
+.solicitud > button:only-of-type {
+  grid-column: 1 / -1;
+}
+
+#lista-solicitudes > .btn-x {
+  position: sticky;
+  top: 0;
+  display: block;
+  margin: -8px -8px 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #fbeaf2;
+  color: #8b1a55;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#lista-solicitudes > .btn-x:hover {
+  background: #8b1a55;
+  color: #fff;
+}
+
+.solicitud h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  color: #8b1a55;
+  margin: 0;
+}
+
+.solicitud h2::before {
+  content: "✓";
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #8b1a55;
+  color: #fff;
+  font-size: 1rem;
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  0%   { transform: scale(0); }
+  70%  { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+#lista-solicitudes {
+  display: none;
+}
+
+#lista-solicitudes.abierta {
+  display: block;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
+  width: min(90vw, 420px);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #f3cfe0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 20px 50px rgba(139, 26, 85, 0.25);
+  animation: aparecer 0.25s ease;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.solicitud .detalle {
+  grid-column: 1 / -1;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 12px 14px;
+  background: #fbeaf2;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.solicitud .detalle li {
+  text-align: left;
+}
+
+.solicitud .detalle strong {
+  display: block;
+  color: #8b1a55;
+}
+
+.nota-local {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b6b6b;
+  margin-bottom: 16px;
+}
+
 /* Columna Derecha: Mapa e Información */
 .contacto-col-derecha {
   display: flex;
@@ -475,6 +730,7 @@
 }
 
 
+
 /* Página: Galería */
 .sectiongaleria {
   display: block;
@@ -583,7 +839,6 @@
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
-
 /* Componentes compartidos: Catálogo y Galería */
 .nav-catalogo ul,
 .nav-galeria ul {
@@ -661,6 +916,16 @@
   color: #a89f91;
 }
 
+.sectiongaleria-page.filtrado {
+  grid-template-rows: none;
+  grid-auto-rows: 260px;
+  height: auto;
+}
+
+.sectiongaleria-page.filtrado figure:nth-child(n) {
+  grid-column: auto;
+  grid-row: auto;
+}
 
 /* Página: Detalle de servicio */
 .main-detalle {
@@ -1361,6 +1626,19 @@
     border-radius: 8px;
     display: block;
   }
+
+  .sectiongaleria-page.filtrado {
+  grid-template-rows: none;
+  grid-auto-rows: 260px;
+  height: auto;
+  column-gap: 30px;
+  row-gap: 25px;
+}
+
+.sectiongaleria-page.filtrado figure:nth-child(n) {
+  grid-column: auto;
+  grid-row: auto;
+}
 
   /* Detalle de servicio */
   .seccion-detalle {

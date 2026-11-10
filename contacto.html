@@ -33,10 +33,15 @@
     </nav>
   </header>
 
+  <div id="fondo-modal"></div>
+
   <main class="maincontacto">
     <section class="sectioncontacto">
       <h1>Contáctanos</h1>
       <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p>
+    <button type="button" id="ver-solicitudes" class="btn-ver">
+      <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Mis solicitudes
+    </button>
     </section>
 
     <div class="contacto-wrapper">
@@ -88,13 +93,16 @@
               <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="500"
                 placeholder="Cuéntanos qué servicio te interesa"></textarea>
             </div>
+            <small id="contador" class="contador" aria-live="polite">0/500</small>
           </div>
 
           <button type="submit" class="btn-enviar">
             <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Enviar mensaje
           </button>
+          <button type="button" class="btn-cancelar">Cancelar</button>
         </form>
       </section>
+    
 
       <div class="contacto-col-derecha">
         <section class="sectionmapa" aria-label="Ubicación de DsGlam-Beauty">
@@ -162,7 +170,8 @@
         </section>
       </div>
     </div>
-  </main>
+  <section id="lista-solicitudes" aria-label="Solicitudes enviadas"></section>  
+</main>
 
   <aside aria-label="Accesos rápidos">
     <a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">
@@ -216,6 +225,8 @@
 
   </footer>
 
+    <script src="JavaScript/contacto.js"></script>
 </body>
+
 
 </html>

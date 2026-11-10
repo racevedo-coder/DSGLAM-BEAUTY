@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../practicaaa"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DsGlamBeauty"
+	}
+}
