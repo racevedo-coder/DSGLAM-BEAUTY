@@ -134,9 +134,9 @@ function crearTarjeta(datos, esNueva) {
         });
         guardarSolicitudes(restantes);
         tarjeta.remove();
-        if (lista.children.length === 0) {
-            cerrarTarjeta();
-        }
+           if (lista.querySelectorAll('.solicitud').length === 0) {
+       cerrarTarjeta();
+   }
     });
 
     botonAceptar.addEventListener('click', cerrarTarjeta);
@@ -165,13 +165,121 @@ fondo.addEventListener('click', function() {
 campoMensaje.addEventListener('input', actualizarContador);
 
 // Actualizar el contador de caracteres al cargar la página
+function limpiarValidacion() {
+    Object.keys(reglas).forEach(function(id) {
+        document.getElementById('error-' + id).textContent = '';
+        document.getElementById(id).closest('.input-icono').classList.remove('invalido', 'valido');
+    });
+}
+
 formulario.addEventListener('reset', function() {
+    limpiarValidacion();
     setTimeout(actualizarContador, 0);
+});
+
+
+const reglas = {
+    nombre: function(valor) {
+        if (valor.trim() === '') return 'Escribe tu nombre.';
+        if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,70}$/.test(valor.trim())) {
+            return 'Solo letras, entre 3 y 70 caracteres.';
+        }
+        return '';
+    },
+    telefono: function(valor) {
+        if (valor.trim() === '') return 'Escribe tu teléfono.';
+        if (!/^3[0-9]{9}$/.test(valor.trim())) {
+            return 'Debe empezar por 3 y tener 10 dígitos.';
+        }
+        return '';
+    },
+    correo: function(valor) {
+        if (valor.trim() === '') return 'Escribe tu correo.';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor.trim())) {
+            return 'Escribe un correo válido, por ejemplo laura@gmail.com.';
+        }
+        return '';
+    },
+    fecha: function(valor) {
+        if (valor === '') return 'Elige la fecha de tu cita.';
+        const hoy = new Date();
+        const hoyTexto = hoy.getFullYear() + '-' +
+            String(hoy.getMonth() + 1).padStart(2, '0') + '-' +
+            String(hoy.getDate()).padStart(2, '0');
+        if (valor < hoyTexto) return 'La fecha no puede ser anterior a hoy.';
+        if (valor > '2026-12-31') return 'Solo agendamos hasta el 31/12/2026.';
+        return '';
+    },
+    mensaje: function(valor) {
+        const largo = valor.trim().length;
+        if (largo < 10) return 'Cuéntanos un poco más (mínimo 10 caracteres).';
+        if (largo > 500) return 'El mensaje no puede pasar de 500 caracteres.';
+        return '';
+    }
+};
+
+function validarCampo(id) {
+    const campo = document.getElementById(id);
+    const textoError = reglas[id](campo.value);
+    const caja = campo.closest('.input-icono');
+    const aviso = document.getElementById('error-' + id);
+
+    aviso.textContent = textoError;
+    caja.classList.toggle('invalido', textoError !== '');
+    caja.classList.toggle('valido', textoError === '');
+
+    return textoError === '';
+}
+
+Object.keys(reglas).forEach(function(id) {
+    const campo = document.getElementById(id);
+    const caja = campo.closest('.input-icono');
+
+    const aviso = document.createElement('small');
+    aviso.id = 'error-' + id;
+    aviso.classList.add('error-campo');
+    aviso.setAttribute('aria-live', 'polite');
+
+    caja.insertAdjacentElement('afterend', aviso);
+    campo.setAttribute('aria-describedby', 'error-' + id);
+});
+
+Object.keys(reglas).forEach(function(id) {
+    const campo = document.getElementById(id);
+    const caja = campo.closest('.input-icono');
+
+    campo.addEventListener('blur', function() {
+        validarCampo(id);
+    });
+
+    campo.addEventListener('input', function() {
+        if (caja.classList.contains('invalido') || caja.classList.contains('valido')) {
+            validarCampo(id);
+        }
+    });
+});
+
+document.getElementById('fecha').addEventListener('change', function() {
+    validarCampo('fecha');
 });
 
 formulario.addEventListener('submit', function(event) {
   event.preventDefault(); // Procesar el formulario, evita que se recargue la página
    
+
+ let todoBien = true;
+   Object.keys(reglas).forEach(function(id) {
+    if (!validarCampo(id)) {
+        if (todoBien) {
+            document.getElementById(id).focus();
+        }
+        todoBien = false;
+    }
+  });
+ if (!todoBien) {
+    return;
+ }
+ 
    const datos = {
         id: solicitudEditando ? solicitudEditando.id : Date.now(),
         nombre: document.getElementById('nombre').value,

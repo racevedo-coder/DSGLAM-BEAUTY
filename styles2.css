@@ -567,6 +567,28 @@
   margin-bottom: 16px;
 }
 
+.input-icono.invalido input,
+.input-icono.invalido textarea {
+  border-color: #c0392b;
+  background: #fdf0ee;
+}
+
+.input-icono.valido input,
+.input-icono.valido textarea {
+  border-color: #2e9e5b;
+}
+
+.error-campo {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #c0392b;
+}
+
+.error-campo:empty {
+  display: none;
+}
+
 /* Columna Derecha: Mapa e Información */
 .contacto-col-derecha {
   display: flex;
