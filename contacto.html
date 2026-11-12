@@ -28,24 +28,28 @@
         <li><a href="catalogo.html">Catálogo</a></li>
         <li><a href="galeria.html">Galería</a></li>
         <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+          <li><a href="index.html#opiniones">Opiniones</a></li>
         <li><a href="contacto.html" aria-current="page">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Fondo oscuro semitransparente para los modales de ver solicitudes y edición -->
   <div id="fondo-modal"></div>
 
   <main class="maincontacto">
     <section class="sectioncontacto">
       <h1>Contáctanos</h1>
       <p>Agenda tu cita o resuelve tus dudas, aquí te escuchamos</p>
-    <button type="button" id="ver-solicitudes" class="btn-ver">
-      <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Mis solicitudes
-    </button>
+      <!-- Botón para abrir el panel emergente de solicitudes guardadas en localStorage -->
+      <button type="button" id="ver-solicitudes" class="btn-ver">
+        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i> Mis solicitudes
+      </button>
     </section>
 
     <div class="contacto-wrapper">
       <section class="sectionformulario" aria-label="Formulario de contacto">
+        <!-- novalidate desactiva los mensajes nativos del navegador para usar la validación personalizada en JS -->
         <form action="#" method="post" novalidate aria-label="Formulario de contacto">
           <div class="form-row">
             <div class="campo-grupo">
@@ -93,12 +97,14 @@
               <textarea id="mensaje" name="mensaje" rows="4" required minlength="10" maxlength="500"
                 placeholder="Cuéntanos qué servicio te interesa"></textarea>
             </div>
+            <!-- Contador de caracteres dinámico gestionado por evento 'input' en contacto.js -->
             <small id="contador" class="contador" aria-live="polite">0/500</small>
           </div>
 
           <button type="submit" class="btn-enviar">
             <i class="fa-regular fa-paper-plane" aria-hidden="true"></i> Enviar mensaje
           </button>
+          <!-- Botón para cancelar el modo de edición y restaurar el formulario -->
           <button type="button" class="btn-cancelar">Cancelar</button>
         </form>
       </section>
@@ -170,6 +176,7 @@
         </section>
       </div>
     </div>
+  <!-- Contenedor dinámico donde contacto.js renderiza las tarjetas de solicitudes guardadas -->
   <section id="lista-solicitudes" aria-label="Solicitudes enviadas"></section>  
 </main>
 

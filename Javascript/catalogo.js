@@ -1,25 +1,23 @@
-// Seleccionamos todos los botones de filtro en el catálogo
+// referencias a los botones de filtro y a las tarjetas de servicios
 const botonesFiltro = document.querySelectorAll('.nav-catalogo a');
 const articulos = document.querySelectorAll('.sectionservicios article');
 
-// Agregamos un evento de clic a cada botón de filtro
+// recorre cada boton y asigna el evento clic
 botonesFiltro.forEach(function(boton) {
-  // Agregamos un evento de clic al botón
   boton.addEventListener('click', function(event) {
-    event.preventDefault(); // Evitar que la página recargue
+    event.preventDefault(); // evita que el enlace recargue la pagina
 
-    // Obtener la categoría del botón clicado
+    // obtiene el texto de la categoria clickeada
     const categoria = this.textContent.trim();
 
-    // Mostrar u ocultar los artículos según la categoría seleccionada
-     articulos.forEach(function(articulo) {
-     const coincide = categoria === 'Todos' || articulo.dataset.categoria === categoria;
-      articulo.style.display = coincide ? '' : 'none';
-        
+    // recorre cada articulo para mostrar u ocultar segun la categoria
+    articulos.forEach(function(articulo) {
+      const coincide = categoria === 'Todos' || articulo.dataset.categoria === categoria;
+      articulo.style.display = coincide ? '' : 'none'; // vacio muestra, 'none' oculta
     });
 
-    // Actualizar la clase activa en los botones de filtro
+    // quita la clase activo de todos los botones y se la asigna al seleccionado
     botonesFiltro.forEach(function(b) { b.classList.remove('activo'); });
-    this.classList.add('activo'); // Agregar la clase 'activo' al botón clicado
+    this.classList.add('activo');
   });
 });

@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "nombre": "Maquillaje social día",
+    "categoria": "Maquillaje",
+    "precio": "$ 40.000",
+    "imagen": "img/inicio1...jpeg",
+    "subtitulo": "Maquillaje natural y duradero para tus eventos de día.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 hora" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "6 a 8 horas" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "llegar con la piel limpia y sin maquillaje" }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Diseño de cejas semipermanentes",
+    "categoria": "Cejas y pestañas",
+    "precio": "$ 15.000",
+    "imagen": "img/detalle1.png",
+    "subtitulo": "Diseño personalizado según tu rostro.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "20 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "2 a 3 semanas" },
+      { "icono": "fa-solid fa-triangle-exclamation", "titulo": "Evita sol y agua directa", "texto": "primeras 24 h" }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Keratinas",
+    "categoria": "Tratamientos capilares",
+    "precio": "$ 130.000",
+    "imagen": "img/catalogo4.jpg",
+    "subtitulo": "Cabello liso, suave y sin frizz.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "2 a 3 horas" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "3 a 4 meses" },
+      { "icono": "fa-solid fa-triangle-exclamation", "titulo": "Evita lavar el cabello", "texto": "primeras 72 h" }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Peinado infantil",
+    "categoria": "Peinados",
+    "precio": "$ 25.000",
+    "imagen": "img/peinadoinfantl.jpeg",
+    "subtitulo": "Peinados cómodos y bonitos para las más pequeñas.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "40 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "todo el evento" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "cabello limpio y seco" }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Maquillaje artístico",
+    "categoria": "Maquillaje",
+    "precio": "$ 45.000",
+    "imagen": "img/catalogo3.jpeg",
+    "subtitulo": "Looks creativos con color para sesiones y eventos.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 a 2 horas" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "toda la jornada" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "llevar una referencia del look que quieres" }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Peinados recogidos",
+    "categoria": "Peinados",
+    "precio": "$ 35.000",
+    "imagen": "img/catalogo6.jpg",
+    "subtitulo": "Recogidos elegantes para grados, bodas y fiestas.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 hora" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "todo el evento" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "cabello limpio y seco" }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Hidratación capilar",
+    "categoria": "Tratamientos capilares",
+    "precio": "$ 80.000",
+    "imagen": "img/img1cat2.jpeg",
+    "subtitulo": "Devuelve brillo y suavidad a tu cabello.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 hora" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "3 a 4 semanas" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "repetir una vez al mes" }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Maquillaje artístico - Infantil",
+    "categoria": "Maquillaje",
+    "precio": "$ 40.000",
+    "imagen": "img/catalogo5.jpeg",
+    "subtitulo": "Diseños divertidos para niñas y niños.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "45 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "todo el evento" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "piel limpia y sin cremas" }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Maquillaje social noche",
+    "categoria": "Maquillaje",
+    "precio": "$ 45.000",
+    "imagen": "img/detalle2.webp",
+    "subtitulo": "Un look sofisticado para tus eventos de noche.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 hora 15 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "8 a 10 horas" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "Recomendación", "texto": "llegar con la piel limpia e hidratada" }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Pestañas punto a punto",
+    "categoria": "Cejas y pestañas",
+    "precio": "$ 30.000",
+    "imagen": "img/detalle3.jpg",
+    "subtitulo": "Extensiones una por una para una mirada natural.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 hora 30 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "3 a 4 semanas" },
+      { "icono": "fa-solid fa-triangle-exclamation", "titulo": "Evita agua y vapor", "texto": "primeras 24 h" }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Alisados",
+    "categoria": "Tratamientos capilares",
+    "precio": "$ 25.000 - 50.000",
+    "imagen": "img/planchado.jpeg",
+    "subtitulo": "Cabello liso y manejable, con el acabado que buscas.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "1 a 2 horas" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "varias semanas" },
+      { "icono": "fa-solid fa-circle-info", "titulo": "El precio varía", "texto": "según el largo y la cantidad de cabello" }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Lifting de pestañas",
+    "categoria": "Cejas y pestañas",
+    "precio": "$ 35.000",
+    "imagen": "img/lifting.jpeg",
+    "subtitulo": "Pestañas curvas y levantadas, sin extensiones.",
+    "especificaciones": [
+      { "icono": "fa-regular fa-clock", "titulo": "Duración", "texto": "45 min" },
+      { "icono": "fa-solid fa-hourglass-half", "titulo": "Efecto dura", "texto": "6 a 8 semanas" },
+      { "icono": "fa-solid fa-triangle-exclamation", "titulo": "Evita agua y vapor", "texto": "primeras 24 h" }
+    ]
+  }
+]

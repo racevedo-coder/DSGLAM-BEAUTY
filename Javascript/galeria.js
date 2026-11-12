@@ -1,34 +1,43 @@
-
-// Obtener referencias a los botones de filtro y las fotos
+// referencias a los elementos del dom
 const seccionFotos = document.querySelector('.sectiongaleria-page');
 const botonesFiltro = document.querySelectorAll('.nav-galeria a');
 const fotos = document.querySelectorAll('.sectiongaleria-page figure');
 
-// Agregar un evento de clic a cada botón de filtro
+// funcion para filtrar las fotos segun la categoria
 function aplicarFiltro(categoria) {
   fotos.forEach(function(foto) {
+    // verifica si la foto coincide con la categoria seleccionada o si es 'Todos'
     const coincide = categoria === 'Todos' || foto.dataset.categoria === categoria;
-    foto.style.display = coincide ? '' : 'none';
+    foto.style.display = coincide ? '' : 'none'; // oculta o muestra la foto
   });
 
-  // Actualizar la clase activa en los botones de filtro
+  // activa visualmente el boton seleccionado
   botonesFiltro.forEach(function(b) {
     b.classList.toggle('activo', b.textContent.trim() === categoria);
   });
 
-   seccionFotos.classList.toggle('filtrado', categoria !== 'Todos');
+  // cambia la rejilla si hay un filtro aplicado
+  seccionFotos.classList.toggle('filtrado', categoria !== 'Todos');
 }
 
-// Aplicar el filtro guardado en sessionStorage al cargar la página
+// agrega el evento clic a cada boton de categoria
 botonesFiltro.forEach(function(boton) {
   boton.addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // evita el salto o recarga del enlace
     const categoria = boton.textContent.trim();
-    // sessionStorage permite guardar el filtro seleccionado para que se mantenga al recargar la página
+
+    // guarda la eleccion en sessionstorage para que persista durante la sesion
     sessionStorage.setItem('filtroGaleria', categoria);
-    aplicarFiltro(categoria);
+
+    aplicarFiltro(categoria); // aplica el filtro inmediatamente
   });
 });
 
-//Aplicar el filtro guardado en sessionStorage al cargar la página
-aplicarFiltro(sessionStorage.getItem('filtroGaleria') || 'Todos');
+// recupera los nombres de las categorias validas
+const categoriasValidas = Array.from(botonesFiltro).map(function(b) {
+  return b.textContent.trim();
+});
+
+// lee el filtro previo guardado en sessionstorage o usa 'Todos' por defecto
+const guardado = sessionStorage.getItem('filtroGaleria');
+aplicarFiltro(categoriasValidas.includes(guardado) ? guardado : 'Todos');

@@ -135,17 +135,6 @@ a {
   transform: translateY(-2px);
 }
 
-.hero-img {
-  width: 75%;
-  max-height: 300px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 20px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 8px 28px rgba(122, 15, 85, 0.28), 0 2px 8px rgba(0, 0, 0, 0.12);
-}
-
 /* Carrusel Bootstrap en el Hero de Inicio */
 .hero-carousel {
   width: 75%;
@@ -347,17 +336,12 @@ a {
   box-shadow: 0 8px 20px rgba(155, 27, 107, 0.22);
 }
 
-.porque,
-.pasos,
-.horario,
-.cta-final {
+.porque {
   padding: 40px;
   text-align: center;
 }
 
-.porque h2,
-.pasos h2,
-.horario h2 {
+.porque h2 {
   display: inline-block;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
@@ -365,14 +349,12 @@ a {
   margin-bottom: 30px;
 }
 
-.porque h3,
-.pasos h3 {
+.porque h3 {
   font-size: 18px;
   margin-bottom: 8px;
 }
 
-.porque p,
-.pasos p {
+.porque p {
   font-size: 15px;
   line-height: 1.6;
 }
@@ -402,50 +384,6 @@ a {
   background-color: #f5ddeb;
   color: #7a0f55;
   font-size: 26px;
-}
-
-
-.pasos ol {
-  list-style: none;
-  counter-reset: paso;
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.pasos li {
-  counter-increment: paso;
-}
-
-.pasos .boton {
-  grid-area: auto;
-  display: block;
-  width: fit-content;
-  margin: 32px auto 0;
-  padding: 12px 28px;
-  font-size: 16px;
-  background-color: #1e7a45;
-  text-align: center;
-
-}
-
-
-
-.pasos li::before {
-  content: counter(paso);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  background-color: #7a0f55;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 
@@ -575,6 +513,227 @@ aside a:nth-child(3) i {
   display: none;
 }
 
+
+html { scroll-behavior: smooth; }
+
+/* opiniones y modal */
+.sectionresenas h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #2b1a26;
+}
+
+.sectionresenas { scroll-margin-top: 90px; }
+
+/* botones de ver y borrar */
+.btn-ver {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1.5px solid #8b1a55;
+  background: #fff;
+  color: #8b1a55;
+  cursor: pointer;
+  margin-top: 8px;
+}
+.btn-ver:hover { background: #8b1a55; color: #fff; }
+
+.btn-borrar {
+  font: inherit;
+  font-size: 0.8rem;
+  margin-top: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  color: #6b6b6b;
+  cursor: pointer;
+}
+
+/* fondo y ventana del modal de opinion */
+.fondo-opinion {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.fondo-opinion.visible { display: block; }
+
+.ventana-opinion { display: none; }
+.ventana-opinion.abierta {
+  display: block;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: min(90vw, 420px);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 1000;
+  background: #fff;
+  border: 1px solid #f3cfe0;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(139, 26, 85, 0.25);
+}
+
+/* formulario de opinion */
+#form-opinion { display: grid; gap: 6px; text-align: left; }
+#form-opinion h3 { text-align: center; margin-bottom: 6px; }
+#form-opinion label,
+#form-opinion legend { font-weight: 600; font-size: 0.9rem; }
+#form-opinion input[type="text"],
+#form-opinion select,
+#form-opinion textarea {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #e6c9d9;
+  border-radius: 10px;
+  background: #fdf8f9;
+}
+#form-opinion fieldset { border: none; padding: 0; margin: 0; }
+
+/* estrellas de calificacion */
+.estrellas-input {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.estrellas-input input { position: absolute; opacity: 0; }
+.estrellas-input label { font-size: 1.8rem; color: #d9d9d9; cursor: pointer; }
+.estrellas-input input:checked ~ label,
+.estrellas-input label:hover,
+.estrellas-input label:hover ~ label { color: #d4a017; }
+.estrellas-input input:focus-visible + label { outline: 2px solid #8b1a55; }
+
+/* mensajes de error */
+.error-campo { display: block; color: #c0392b; font-size: 0.8rem; }
+.error-campo:empty { display: none; }
+
+.acciones-opinion { display: flex; gap: 10px; margin-top: 10px; }
+.acciones-opinion button {
+  flex: 1;
+  font: inherit;
+  font-weight: 600;
+  padding: 11px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn-principal { background: #8b1a55; color: #fff; border: none; }
+.btn-secundario { background: #fff; color: #6b6b6b; border: 1.5px solid #d9d9d9; }
+
+/* tarjetas de resenas */
+.sectionresenas {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.sectionresenas h2 {
+  margin-bottom: 8px;
+}
+
+.resenas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.resena {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #f3cfe0;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(139, 26, 85, 0.1);
+  text-align: center;
+}
+
+.resena p {
+  margin: 0;
+}
+
+.resena .estrellas {
+  color: #d4a017;
+  font-size: 1.2rem;
+}
+
+.resena small {
+  color: #8b1a55;
+}
+
+/* estado de carga */
+.cargando,
+.error-carga {
+  grid-column: 1 / -1;
+  padding: 24px;
+  color: #6b6b6b;
+}
+
+/* spinner animado */
+.cargando::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px;
+  border: 4px solid #f3cfe0;
+  border-top-color: #8b1a55;
+  border-radius: 50%;
+  animation: girar 0.8s linear infinite;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+/* error al cargar */
+.error-carga {
+  background: #fdf0ee;
+  border: 1px solid #c0392b;
+  border-radius: 12px;
+  color: #c0392b;
+}
+
+.error-carga button {
+  font: inherit;
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #c0392b;
+  background: #fff;
+  color: #c0392b;
+  cursor: pointer;
+}
+
+/* estados de validacion */
+#form-opinion input.invalido,
+#form-opinion select.invalido,
+#form-opinion textarea.invalido {
+  border-color: #c0392b;
+  background: #fdf0ee;
+}
+
+#form-opinion input.valido,
+#form-opinion select.valido,
+#form-opinion textarea.valido {
+  border-color: #2e9e5b;
+}
+
+.estrellas-input.invalido {
+  outline: 1px solid #c0392b;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 @media (max-width: 1024px) {
   .barra {
     padding: 14px 30px;
@@ -586,10 +745,6 @@ aside a:nth-child(3) i {
   }
 
   .porque ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .pasos ol {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -638,7 +793,6 @@ aside a:nth-child(3) i {
     justify-content: center;
   }
 
-  .hero-img,
   .hero-carousel {
     width: 80%;
     max-height: 260px;
@@ -658,11 +812,6 @@ aside a:nth-child(3) i {
   .porque ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .pasos ol {
-    grid-template-columns: 1fr;
-  }
-
 
   .nav ul {
     flex-wrap: wrap;
@@ -739,11 +888,6 @@ aside a:nth-child(3) i {
     font-size: 14px;
   }
 
-  .hero-img {
-    width: 100%;
-    max-height: 220px;
-  }
-
   .boton {
     font-size: 14px;
     padding: 11px 20px;
@@ -755,14 +899,8 @@ aside a:nth-child(3) i {
     gap: 16px;
   }
 
-  .porque,
-  .pasos {
+  .porque {
     padding: 24px 16px;
-  }
-
-  .pasos ol {
-    grid-template-columns: 1fr;
-    gap: 20px;
   }
 
 

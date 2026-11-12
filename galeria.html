@@ -31,6 +31,7 @@
         <li><a href="catalogo.html">Catalogo</a></li>
         <li><a href="galeria.html" aria-current="page">Galeria</a></li>
         <li><a href="quienes-somos.html">Quienes somos?</a></li>
+        <li><a href="index.html#opiniones">Opiniones</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
@@ -43,6 +44,7 @@
       <p>Aqui encontraras los mejores trabajos</p>
     </div>
 
+    <!-- Menú de filtros por categoría para la galería (interactúa con galeria.js) -->
     <nav class="nav-galeria" aria-label="Filtrar por categoria">
       <ul>
         <li><a href="galeria.html" class="activo">Todos</a></li>
@@ -57,6 +59,7 @@
 
   <main aria-label="Galeria de trabajos">
 
+    <!-- Rejilla de fotos: cada <figure> contiene data-categoria evaluada por galeria.js -->
     <section class="sectiongaleria-page" aria-label="Trabajos destacados">
       <figure data-categoria="Maquillaje">
         <img src="img/galeria1.jpg" alt="Maquillaje social profesional" loading="lazy">
@@ -86,17 +89,38 @@
         <img src="img/galeria8.jpeg" alt="Alisado profesional de cabello" loading="lazy">
         <figcaption>Alisado</figcaption>
       </figure>
+       <figure data-categoria="Cejas y pestañas">
+        <img src="img/lifting.jpeg" alt="Lifting y rizado de pestañas" loading="lazy">
+        <figcaption>Lifting de pestañas</figcaption>
+      </figure>
+      <figure data-categoria="Peinados">
+        <img src="img/peinadoinfantl.jpeg" alt="Peinado infantil con trenzas y accesorios" loading="lazy">
+        <figcaption>Peinado infantil</figcaption>
+      </figure>
+      <figure data-categoria="Maquillaje">
+        <img src="img/catalogo3.jpeg" alt="Maquillaje y peinado para eventos y fiestas" loading="lazy">
+        <figcaption>Maquillaje artístico</figcaption>
+      </figure>
+      <figure data-categoria="Tratamientos capilares">
+        <img src="img/planchado.jpeg" alt="Tratamiento y planchado capilar profesional" loading="lazy">
+        <figcaption>Keratina</figcaption>
+      </figure>
+      <figure data-categoria="Cejas y pestañas">
+        <img src="img/detalle3.jpg" alt="Extensiones de pestañas punto a punto" loading="lazy">
+        <figcaption>Pestañas punto a punto</figcaption>
+      </figure>
+      <figure data-categoria="Peinados">
+        <img src="img/catalogo6.jpg" alt="Maquillaje social con acabado profesional" loading="lazy">
+        <figcaption>Peinados recogidos</figcaption>
+      </figure>
+      <figure data-categoria="Maquillaje">
+        <img src="img/catalogo5.jpeg" alt="Maquillaje social con acabado profesional" loading="lazy">
+        <figcaption>Maquillaje artístico-Infantil</figcaption>
+      </figure>
+
+  
     </section>
 
-
-    <nav class="paginacion" aria-label="Paginacion de la galeria">
-      <ul>
-        <li><a href="#" class="deshabilitado" aria-label="Pagina anterior">&lsaquo;</a></li>
-        <li><a href="galeria.html" class="activo" aria-current="page">1</a></li>
-        <li><a href="galeria2.html">2</a></li>
-        <li><a href="galeria2.html" aria-label="Pagina siguiente">&rsaquo;</a></li>
-      </ul>
-    </nav>
 
   </main>
 

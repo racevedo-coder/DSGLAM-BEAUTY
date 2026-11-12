@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laura Gómez",
+    "servicio": "Maquillaje social",
+    "estrellas": 5,
+    "comentario": "Quedé feliz con el maquillaje, me duró toda la noche."
+  },
+  {
+    "id": 2,
+    "nombre": "Camila Ríos",
+    "servicio": "Keratina",
+    "estrellas": 5,
+    "comentario": "Mi cabello quedó suave y brillante, muy buena atención."
+  },
+  {
+    "id": 3,
+    "nombre": "Valentina Díaz",
+    "servicio": "Diseño de cejas",
+    "estrellas": 4,
+    "comentario": "Me gustó mucho el resultado, súper recomendado."
+  }
+]

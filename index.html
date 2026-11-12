@@ -30,6 +30,7 @@
           <li><a href="catalogo.html">Catálogo</a></li>
           <li><a href="galeria.html">Galería</a></li>
           <li><a href="quienes-somos.html">¿Quiénes somos?</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -153,7 +154,63 @@
         </li>
       </ul>
     </section>
-  </main>
+
+    <!-- Fondo oscuro semitransparente para el modal de opiniones -->
+    <div id="fondo-opinion" class="fondo-opinion"></div>
+
+    <!-- Modal emergente para que el usuario registre su opinión (Módulos 1, 3 y 4) -->
+    <section id="ventana-opinion" class="ventana-opinion" aria-label="Escribir una opinión">
+      <form id="form-opinion" novalidate>
+        <h3>Cuéntanos tu experiencia</h3>
+
+        <label for="op-nombre">Nombre</label>
+        <input type="text" id="op-nombre" required maxlength="40" placeholder="Laura Gómez">
+        <small class="error-campo" id="error-op-nombre"></small>
+
+        <label for="op-servicio">Servicio</label>
+        <select id="op-servicio" required>
+          <option value="">Elige un servicio</option>
+          <option>Maquillaje social</option>
+          <option>Diseño de cejas</option>
+          <option>Keratinas</option>
+          <option>Peinados</option>
+          <option>Otro</option>
+        </select>
+        <small class="error-campo" id="error-op-servicio"></small>
+
+        <!-- Selector de calificación mediante radio buttons invertidos con estrellas -->
+        <fieldset>
+          <legend>Calificación</legend>
+          <div class="estrellas-input">
+            <input type="radio" name="estrellas" id="e5" required value="5"><label for="e5" title="5 estrellas">★</label>
+            <input type="radio" name="estrellas" id="e4" value="4"><label for="e4" title="4 estrellas">★</label>
+            <input type="radio" name="estrellas" id="e3" value="3"><label for="e3" title="3 estrellas">★</label>
+            <input type="radio" name="estrellas" id="e2" value="2"><label for="e2" title="2 estrellas">★</label>
+            <input type="radio" name="estrellas" id="e1" value="1"><label for="e1" title="1 estrella">★</label>
+          </div>
+        </fieldset>
+        <small class="error-campo" id="error-op-estrellas"></small>
+
+        <label for="op-comentario">Comentario</label>
+        <textarea id="op-comentario" rows="3" required maxlength="200" placeholder="Cuéntanos cómo te fue"></textarea>
+        <small class="error-campo" id="error-op-comentario"></small>
+
+        <div class="acciones-opinion">
+          <button type="button" id="cancelar-opinion" class="btn-secundario">Cancelar</button>
+          <button type="submit" class="btn-principal">Publicar opinión</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Sección de Reseñas: carga asíncrona de data.json y renderizado dinámico (Módulos 1 y 2) -->
+    <section class="sectionresenas" id="opiniones" aria-label="Opiniones de clientas">
+      <h2>Lo que dicen nuestras clientas</h2>
+      <button type="button" id="abrir-opinion" class="btn-ver">Escribir una opinión</button>
+      <!-- Contenedor vacío donde resenas.js inyecta el spinner, las tarjetas o los errores -->
+      <div id="resenas" class="resenas"></div>
+    </section>
+    
+</main>
 
   <aside aria-label="Accesos rápidos">
     <a href="https://wa.link/yz34tq" target="_blank" rel="noopener noreferrer">
@@ -206,7 +263,8 @@
     <small>Copyright © 2026 DsGlam-Beauty. Todos los derechos reservados.</small>
 
   </footer>
-
+     <script src="Javascript/resenas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
